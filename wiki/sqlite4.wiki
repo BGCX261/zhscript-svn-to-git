@@ -1,0 +1,13 @@
+#summary 第三方库——sqlite3
+
+= 第三方库——sqlite3 =
+sqlite的再接口
+
+功能：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/sqlite4
+
+源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/sqlite4
+
+示范：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/sqlite.zs

@@ -1,0 +1,8 @@
+#summary 自己的库——输出输入重定向
+
+= 自己的库——输出输入重定向 =
+<pre>
+具体功能看：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/redireconsoi4
+库的源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/redireconsoi4

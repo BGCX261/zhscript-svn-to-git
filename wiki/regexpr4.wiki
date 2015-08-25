@@ -1,0 +1,9 @@
+#summary 自己的库——正则表达式
+
+= 自己的库——正则表达式 =
+功能：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/regexpr4<br>
+源码：<br>
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/regexpr4<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/regexpr.zs<br>

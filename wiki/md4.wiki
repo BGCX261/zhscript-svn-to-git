@@ -1,0 +1,13 @@
+#summary 第三方库——md5
+
+= 第三方库——md5 =
+虽然是第三方库，但没有现成.so文件可用，自己编译，md5算法源文件来自网络
+
+功能：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/md4
+
+源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/md4
+
+示范：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/md.zs

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+function __(id){
+	return document.getElementById(id);
+}
+function set_w__(){
+	var w=document.body.clientWidth;
+	var h=document.body.clientHeight;
+	var t=__("text");
+	t.width=(w-t.offsetLeft)+"px";
+	var lf=__("left_frame");
+	lf.style.height=(h-lf.offsetTop-2/*lf.style.borderTopWidth-lf.style.borderBottomWidth*/)+"px";
+}
+window.onresize=function(){
+	set_w__();
+}
+function show__(gb18030,filename){
+	document.title=filename;
+	__("text").src="about:blank";
+	window.setTimeout('__("text").contentDocument.write(zso1_("读取文件“'+filename+'”、'+gb18030+'"))',100);
+	return false;
+}
+function show2__(filename){
+	document.title=filename;
+	__("text").src=filename;
+	return false;
+}
+function dir__(){
+	var htm="";
+	var root=arguments[0];
+	for(var i=1;i<arguments.length;i++){
+		if(typeof arguments[i]=="object"){
+			var a=arguments[i];
+			for(var i1=0;i1<a.length;i1++)
+				htm+=zso1_('扫描目录“'+a[i1]+'”、'+root);
+			continue;
+		}
+		htm+=zso1_('扫描目录“'+arguments[i]+'”、'+root);
+	}
+	__('left_frame').innerHTML=htm;
+	return false;
+}
+function root__(){
+	return dir__(1,eval(zso1_('得根目录')));
+}
+function redir__(filename){
+	return dir__(3,filename.substring(0,filename.lastIndexOf("/")+1));
+}
+function del__(filename){
+	var s="执行“rm -rf '"+filename+"'”";
+	if(!confirm(s))
+		return;
+	if(zso1_(s)!='0'){
+		alert(s+"失败");
+		return;
+	}
+	redir__(filename);
+	return false;
+}
+function edit__(filename){
+	zso1_("执行“gedit '"+filename+"'&”");
+	return false;
+}
+</script>
+<style>
+body{
+	margin:0px 0px 0px 0px;
+}
+iframe{
+	height:100%;
+	position:absolute;left:202px;top:0px;margin:0 0 0 0;
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+div{border:1px dashed #000;overflow:auto;white-space:nowrap;}
+#left_frame{
+	position:absolute;left:0px;top:60px;width:200px;
+	font-size:12px;
+}
+#top_frame{
+	position:absolute;left:0px;top:0px;width:200px;height:50px;
+}
+</style>
+</HEAD>
+<BODY>
+<div id=top_frame>
+<a href="javascript:void(0)" onclick="return root__();" id=root>根目录</a>
+</div>
+<div id=left_frame></div>
+<iframe id=text name=text src="about:blank"></iframe>
+<embed id=zso1_ width=0 height=0 type="application/mozilla-zhscript-plugin" src="func.zs" 
+so_dir="/usr/local/lib/zhscript/"
+/>
+<script>
+set_w__();
+window.setTimeout('__("root").onclick()',100);
+</script>
+</BODY>
+</HTML>

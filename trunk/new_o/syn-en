@@ -1,0 +1,32 @@
+` '
+$( )
+asc
+/* */
+[ ]
+; ;
+~
+: :
+, ,
+{ }
+== != <= < >= > ! && ||
+if then else
+switch
+for break continue
+set top super lock = delete
+define noarg
+aliashas
+<<< >>> text
+begin end code
+echo
+exec call
+load eval with
+exit return
+
+arg args
+.length .
+keyword
+nullcallback
+window
+
+main
+range outrange 

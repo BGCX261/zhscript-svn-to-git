@@ -1,0 +1,49 @@
+#summary 代码：用一个属性值改变指定目录里的所有文件和目录
+
+= 用一个属性值改变指定目录里的所有文件和目录 =
+属性值默认是644，而用目录上则会加上x属性以保证可进入，即755，属性值的相应位如果设置为0（即禁止）则用在目录时保持0，如600的话则为700
+
+带参数时，第一个参数指目录，第二个指属性，第三个为按名称匹配范围，也可通过-d、-m、-fn来各自单独设置
+{{{
+#!/usr/bin/zhscript -E err-en -S syn-en --;
+set dir = .;
+set fmod = 644;
+set name = ;
+load lib-en/clpars4;
+call $(cmdline-set-callback), 
+	-d, `dir, default $(dir)', 1, begin
+		set dir[super] = $(arg1);
+	end, 
+	-m, `mod, default $(fmod)', 1, begin
+		set fmod[super] = $(arg1);
+	end, 
+	-fn, `filename match', 1, begin
+		set name[super] = `-name "$(arg1)"';
+	end, 
+	, `1-d, 2-m, 3-fn', 1, begin
+		switch $(arg1) {
+			== 1 then set dir[super] = $(arg2) : break;
+			== 2 then set fmod[super] = $(arg2) : break;
+			== 3 then set name[super] = `-name "$(arg2)"' : break;
+		};
+	end, 
+	-h | --help, , 0, begin
+		echo call $(cmdline-help);
+		exit;
+	end;
+call $(cmdline-parse-with-no), $(args);
+
+load lib-en/gjk4;
+set add = 111;
+set 1 = calc $(fmod) / 100, 0;
+set 2 = calc $(fmod) % 100 / 10, 0;
+set 3 = calc $(fmod) % 10;
+if $(3) == 0 || > 6 then set add = calc $(add) - 1;
+if $(2) == 0 || > 6 then set add = calc $(add) - 10;
+if $(1) == 0 || > 6 then set add = calc $(add) - 100;
+set dmod = calc $(fmod)+$(add);
+echo #$(1)$(2)$(3) asc10 #$(dmod) asc10;
+
+exec `find $(dir) -type f $(name) -a ! -perm $(fmod) -printf "chmod $(fmod) \"%p\"\n"';
+exec `find $(dir) -type d $(name) -a ! -perm $(dmod) -printf "chmod $(dmod) \"%p\"\n"';
+}}}

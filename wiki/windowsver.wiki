@@ -1,0 +1,16 @@
+#summary 交叉编译成windows版
+
+= 交叉编译成windows版 =
+<pre>
+需要安装mingw32库，我目前的路径在
+/usr/i586-mingw32msvc/
+
+使用到了dlfcn，请往
+http://code.google.com/p/dlfcn-win32/downloads/list
+下载安装
+
+因为在ubuntu下的默认编码是utf8，所以在windows下显示的是乱码，不过逻辑不乱
+
+在new_l32里选择build 'exe'将生成l.exe在new_o目录
+在new_l432_so里选择build 'exe'将生成l4.dll在new_o目录
+</pre>

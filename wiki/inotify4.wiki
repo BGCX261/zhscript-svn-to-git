@@ -1,0 +1,8 @@
+#summary 自己的库——inotify
+
+= 自己的库——inotify =
+监视文件/文件夹的修改<br>
+功能：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/inotify4<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/inotify.zs<br>

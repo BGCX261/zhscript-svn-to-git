@@ -1,0 +1,10 @@
+#summary 第三方库——base64
+
+= 第三方库——base64 =
+虽然是第三方库，但.so文件得自己编译，base64.h来自网络<br>
+功能：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/base64<br>
+源码：<br>
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/base64<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/base64.zs<br>

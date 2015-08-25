@@ -1,0 +1,13 @@
+#summary 自己的库——thread
+
+= 自己的库——thread =
+在另外线程里解释代码
+
+功能：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/thread4
+
+源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/thread4
+
+示范：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/thread.zs

@@ -1,0 +1,9 @@
+#summary 第三方库——curl
+
+= 第三方库——curl =
+依赖于libcurl这一著名的库。<br>
+<br>
+接口：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/curl4<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/curl.zs<br>

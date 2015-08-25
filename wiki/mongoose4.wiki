@@ -1,0 +1,23 @@
+#summary 第三方库——mongoose
+
+= 第三方库——mongoose =
+mongoose 是一个轻量级 web 服务器，他的项目站在 http://code.google.com/p/mongoose/ ，欲了解他请前往或搜相关关键字
+
+相对于以 apache 为首的专用 web 服务器来说，他即开即用，没有那么麻烦的配置和安装指定，用在 wifi 时代所需要的电脑之间、电脑与智能设备之间传送数据那是再合适不过，关闭后也还可以打包带走
+
+该库除了支持 mongoose 的所有功能（因为就是直接包含源码）外，另外支持一种 .wzs 后缀的动态网页，也就是 web zhscript
+
+在进入该种网页前，会把所有通过 get 和或 post 提交过来的 html 变量字段都分配成了 zhscript 变量，而其中的用于上传文件的 file 字段则会先分析出文件（因为可能存在多个）然后以他的上传时文件名保存在设定的上传目录里，他对应的 zhscript 变量就是这个保存文件的路径，即所谓表单多文件上传
+
+重定义了“显示”关键字，于是 wzs 文件里所有的“显示”的内容将都是直接输出到网页上
+
+因为此类应用的程序的主体是 zhscript（的外壳），于是 wzs 便突破了一般网页出于安全考虑而无法执行服务器本地程序的限制，可以执行诸如关机等管理员命令，也可以调用 gui 程序弹出在服务器端屏幕上
+
+功能：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/mongoose4
+
+源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/mongoose4
+
+示范：
+http://code.google.com/p/zhscript/source/browse/trunk/app/mongoose

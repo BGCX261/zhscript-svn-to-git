@@ -1,0 +1,9 @@
+#summary 自己的库——变量表
+
+= 自己的库——变量表 =
+功能：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/vartable4<br>
+源码：<br>
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/vartable4<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/vartable.zs<br>

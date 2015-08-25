@@ -1,0 +1,7 @@
+#summary 自己的库——相当于一些命令行常用功能
+<pre>
+具体功能看：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/doscmd4
+库的源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/doscmd4
+</pre>

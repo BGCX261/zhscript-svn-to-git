@@ -1,0 +1,12 @@
+#summary zhscript.7z怎么使用
+
+= 这是一个需要手工安装的包 =
+
+我目前的设置：<br>
+这个包是解压成 /usr/local/lib/zhscript 的位置，然后我又有<br>
+ln -s /usr/local/lib/zhscript/l /usr/bin/zhscript<br>
+的符号连接<br>
+程序能够读出真实的目录从而找到配置文件、库等<br>
+这样之后就可以以<br>
+#!/usr/bin/zhscript -I zh --。<br>
+为头行来写脚本文件了

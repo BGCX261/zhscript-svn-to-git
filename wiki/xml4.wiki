@@ -1,0 +1,8 @@
+#summary 自己的库——xml解析
+
+= 自己的库——xml解析 =
+该库依赖于libxml2。
+具体功能看：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/xml4
+库的源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/xml4

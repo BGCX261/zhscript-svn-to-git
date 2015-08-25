@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<TITLE></TITLE>
+<style>
+/*.toolbutton{width:50px;height:50px;}*/
+.pic_mask{
+position:absolute;left:100px;top:100px;width:100px;height:100px;
+opacity:0;
+}/*vertical-align:middle;*/
+#pic_mask_0a_{background:#f00;color:white;}#pic_mask_0_{cursor:nw-resize;}
+#pic_mask_1a_{background:#f80;color:white;}#pic_mask_1_{cursor:n-resize;left:200px;}
+#pic_mask_2a_{background:#08f;color:white;}#pic_mask_2_{cursor:ne-resize;left:300px;}
+#pic_mask_3a_{background:#80f;color:white;}#pic_mask_3_{cursor:se-resize;left:400px;}
+#pic_mask_4a_{background:#0f0;color:black;}#pic_mask_4_{cursor:w-resize;top:200px;}
+#pic_mask_5a_{background:#ff0;color:black;}#pic_mask_5_{cursor:s-resize;left:200px;top:200px;}
+#pic_mask_6a_{background:#00f;color:white;}#pic_mask_6_{cursor:e-resize;left:300px;top:200px;}
+table{width:100%;height:100%;text-align:center;}
+</style>
+</HEAD>
+<script src=func.js></script>
+<BODY style="margin:0px 0px 0px 0px;background:#222;">
+<embed id=zs_ width=0 height=0 type="application/mozilla-zhscript-plugin" src="func.zs" />
+<!--div id=toolbar_ style="position:absolute;left:0px;top:0px;">
+<img class=toolbutton src=res/r.png title='随机(r)' onclick='rand__()'>
+<img class=toolbutton src=res/b.png title='上一个(b)' onclick='back__()'>
+<img class=toolbutton src=res/n.png title='下一个(n)' onclick='next__()'>
+<img class=toolbutton src=res/f.png title='刷新(f)' onclick='set_pic__()'>
+<img class=toolbutton src=res/e.png title='编辑(e)' onclick='edit__()'>
+<img class=toolbutton src=res/x.png title='销毁(x)' onclick='del__()'>
+<img class=toolbutton src=res/l.png title='扫描' onclick='zs_("扫描")'>
+</div-->
+<div class=pic_mask id=pic_mask_0_ onclick='zs_(" 扫描");pic_mask_show__()' 
+><table><tr id=pic_mask_0a_><td>扫描</td></tr></table></div>
+<div class=pic_mask id=pic_mask_1_ onclick="set_pic__()" 
+><table><tr id=pic_mask_1a_><td>刷新(f)</td></tr></table></div>
+<div class=pic_mask id=pic_mask_2_ onclick="del__()" 
+><table><tr id=pic_mask_2a_><td>销毁(x)</td></tr></table></div>
+<div class=pic_mask id=pic_mask_3_ onclick="edit__()" 
+><table><tr id=pic_mask_3a_><td>编辑(e)</td></tr></table></div>
+<div class=pic_mask id=pic_mask_4_ onclick="back__()" 
+><table><tr id=pic_mask_4a_><td>上一个(b)</td></tr></table></div>
+<div class=pic_mask id=pic_mask_5_ onclick="rand__()" 
+><table><tr id=pic_mask_5a_><td>随机(r)</td></tr></table></div>
+<div class=pic_mask id=pic_mask_6_ onclick="next__()" 
+><table><tr id=pic_mask_6a_><td>下一个(n)</td></tr></table></div>
+<script>
+//set_toolbar_loc__();
+set_pic_mask_rect__();
+</script>
+<iframe id=pic width=100% height=100% frameborder=0 marginwidth=0 marginheight=0><!-- 
+onload="set_pic_mask_rect__(this.offsetLeft,this.offsetTop,this.offsetWidth,this.offsetHeight);"--></iframe>
+</BODY>
+</HTML>

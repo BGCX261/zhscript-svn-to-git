@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="main_window">
+    <property name="title" translatable="yes">&#x745C;&#x4F3D;&#x65F6;&#x949F;</property>
+    <property name="icon">p1.png</property>
+    <property name="skip_taskbar_hint">True</property>
+    <child>
+      <object class="GtkDrawingArea" id="drawingarea1">
+        <property name="visible">True</property>
+        <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+        <property name="tooltip_text" translatable="yes">Alt+&#x9F20;&#x6807;&#x62D6;&#x52A8;</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMenu" id="menu1">
+    <property name="visible">True</property>
+    <child>
+      <object class="GtkImageMenuItem" id="close">
+        <property name="label" translatable="yes">&#x5173;&#x95ED;</property>
+        <property name="visible">True</property>
+        <property name="image">image2</property>
+        <property name="use_stock">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="about">
+        <property name="label" translatable="yes">&#x5173;&#x4E8E;</property>
+        <property name="visible">True</property>
+        <property name="image">image1</property>
+        <property name="use_stock">False</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="stock">gtk-close</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="stock">gtk-about</property>
+    <property name="icon-size">1</property>
+  </object>
+</interface>

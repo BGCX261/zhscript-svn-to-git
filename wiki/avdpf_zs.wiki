@@ -1,0 +1,89 @@
+#summary 代码：android模拟器皮肤选择器
+
+= android模拟器皮肤选择器 =
+{{{
+#!/usr/lib/zhscript/gtkmmsh lib2/select1.glade --。
+加载lib/defi。
+隧道标题为“‘参数’ - android模拟器皮肤选择器”。
+赋予版本以8。
+赋予【主】强制以0。
+赋予号以2。
+循环先
+	如果不存在参数‘号’那么跳出。
+	当‘参数‘号’’先
+		等于v那么赋予号以算术‘号’+1，赋予版本以‘参数‘号’’，跳出。
+		等于qz那么赋予【主】强制以1，跳出。
+		那么隧道标题为错误选项‘参数‘号’’，结束。
+	了。
+	赋予号以算术‘号’+1。
+了。
+赋予【主】版本目录以platforms/android-‘版本’。
+赋予【主】皮肤目录以‘版本目录’/skins。
+赋予【主】皮肤绝对目录以/opt2/android-sdk-linux_x86/‘皮肤目录’。
+别名模拟器名以参数1。
+加载lib/gjk4。
+赋予【主】.android以先调用‘得环境变量方法’、HOME了/.android。
+加载lib/doscmd4。
+赋予【主】config.ini以‘.android’/avd/‘模拟器名’.avd/config.ini。
+如果调用‘exist’、‘config.ini’等于0那么隧道标题为‘config.ini’不存在，结束。
+
+赋予号以1。
+赋予搜以调用‘dir.begin’、‘皮肤绝对目录’、、afad。
+调用‘dir.sort’、‘搜’、0。
+循环先
+	赋予皮肤名以调用‘dir.next’、‘搜’。
+	如果不‘皮肤名’那么跳出。
+	赋予图片以‘皮肤绝对目录’/‘皮肤名’/background_port.png。
+	如果调用‘exist’、‘图片’否则赋予图片以‘皮肤绝对目录’/‘皮肤名’/background.png。
+	赋予【主】项目之‘号’之1以‘皮肤名’。
+	赋予【主】项目之‘号’之2以‘图片’。
+	赋予号以算术‘号’+1。
+了。
+调用‘dir.end’、‘搜’。
+
+隧道内容为源码为下代码
+	如果‘肇事者’等于图标夹并且存在参数3并且‘参数3’等于活性那么先
+		别名皮肤名以参数1。
+		调用‘正则攫’、先调用‘type’、‘皮肤绝对目录’/‘皮肤名’/hardware.ini了、.*hw\.lcd\.density=([^↙]+)。
+		别名density以之1。
+		如果‘强制’那么
+			赋予内容以
+			hw.lcd.density=‘density’↙
+			disk.cachePartition.size=512MB↙
+			skin.name=‘皮肤名’↙
+			skin.path=‘皮肤目录’/‘皮肤名’↙
+			disk.cachePartition=yes↙
+			vm.heapSize=256↙
+			hw.ramSize=256↙
+			（sdcard.path=‘.android’/sdcard/sdcard.img↙）
+			image.sysdir.1=‘版本目录’/images/。
+		否则
+			赋予内容以‘部分之1’‘density’‘部分之3’‘皮肤名’‘部分之5’‘皮肤目录’/‘皮肤名’‘部分之7’。
+		显示‘内容’↙。
+		调用‘echo’、‘内容’、‘config.ini’。
+		隧道终止。
+		退出。
+	了。
+上代码。
+
+隧道窗口宽高为850、600。
+隧道读图片限制为96、96。
+
+隧道定时器为启动为200、下代码
+	隧道定时器为‘动作’为移除。
+	刷新图标夹。
+
+	加载lib/regexpr4。
+	调用‘正则攫’、先调用‘type’、‘config.ini’了、
+		(.*hw\.lcd\.density=)([^↙]+)
+		(.+skin\.name=)([^↙]+)
+		(.+skin\.path=)([^↙]+)(.*)、【主】部分。
+	显示‘config.ini’↙。
+	加载lib/defii。
+	显示‘颜色’‘蓝字’m‘部分之1’‘颜色’‘黄字’m‘部分之2’
+		‘颜色’‘蓝字’m‘部分之3’‘颜色’‘黄字’m‘部分之4’
+		‘颜色’‘蓝字’m‘部分之5’‘颜色’‘黄字’m‘部分之6’
+		‘颜色’‘蓝字’m‘部分之7’‘颜色’m↙。
+	隧道图标夹、选择、‘部分之4’、‘图标夹’。
+上代码。
+}}}

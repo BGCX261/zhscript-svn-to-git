@@ -1,0 +1,9 @@
+#summary 自己的库——套接字
+
+<pre>
+= 自己的库——套接字 =
+具体功能看：
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/socket4
+库的源码：
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/socket4
+</pre>

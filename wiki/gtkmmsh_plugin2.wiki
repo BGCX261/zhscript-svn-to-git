@@ -1,0 +1,22 @@
+#summary gtkmmsh已有插件
+
+= gtkmmsh已有插件 =
+||||名称||使用到的应用||
+||common||一般||wqq(2) movbrow open_t startbox huitu tools2 dckyouku jtxq rptestj1||
+||buju||布局||wqq(2) movbrow startbox dckyouku clock jtxq||
+||timeout||定时器||wqq(2) movbrow open_t clock clock2 jtxq||
+||menu||菜单||clock clock2||
+||tmpl||模板||||
+||statusicon||托盘||wqq(2) clock2 open_t rptestj1||
+||dlg||对话框||startbox movbrow zsedit||
+||nostdw||非标准窗口||clock clock2 jtxq||
+||imagecache||图片缓存||zsedit startbox movbrow||
+||iconview||图标夹||startbox movbrow zsedit||
+||textview||文本框||zsedit||
+||sourceview||源码框||zsedit||
+||tree||树||zsedit||
+||huitu||绘图||clock clock2 huitu||
+||webkit||webkit||open_t cangbrow dckyouku jtxq wqq2||
+||webkit3||webkit3||wqq||
+||dnd||拖放||||
+||feiqi||废弃（用于兼容）||||

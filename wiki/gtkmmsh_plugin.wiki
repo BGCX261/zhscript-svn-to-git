@@ -1,0 +1,5 @@
+#summary gtkmmsh开始改用插件架构
+
+= gtkmmsh开始改用插件架构 =
+
+gtkmmsh改成扩展功能调用插件的架构，目前有三个插件，statusicon、iconview、tmpl，因为gtkmmsh是个通用程序，为了让应用不包含他不使用的部分，也能够程序小

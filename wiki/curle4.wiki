@@ -1,0 +1,9 @@
+#summary 自己的库——curl辅助
+
+= 自己的库——curl辅助 =
+功能：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/lib/curle4<br>
+源码：<br>
+http://code.google.com/p/zhscript/source/browse/#svn/trunk/curle4<br>
+示范：<br>
+http://code.google.com/p/zhscript/source/browse/trunk/new_o/demo/curle.zs<br>

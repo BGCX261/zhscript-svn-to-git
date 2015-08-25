@@ -1,0 +1,10 @@
+#summary 用中文脚本来绘图
+
+= 用中文脚本来绘图 =
+<pre>
+功能如题，需要gtkmm支持库，下载 http://zhscript.googlecode.com/files/huitu.7z 解压，运行其中的huitu，这只是个雏形
+下面上图
+http://zhscript.googlecode.com/svn/tmp/huitu1.png
+第二个示范是时钟，由 http://library.gnome.org/devel/gtkmm-tutorial/2.21/sec-drawing-clock-example.html.en 改写而成
+http://zhscript.googlecode.com/svn/tmp/huitu2.png
+</pre>

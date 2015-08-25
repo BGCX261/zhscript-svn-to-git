@@ -1,0 +1,12 @@
+#summary 用 glade + zhscript 做gui程序编写
+
+= 用 glade + zhscript 做gui程序编写 =
+<pre>
+用glade去画出gui程序的界面，保存为ui文件
+
+通过 gtkmmsh[/p/zhscript/source/browse/#svn/trunk/gtkmmsh] 程序装入显示这个界面
+
+gtkmmsh提供接口允许zhscript访问并操作界面上的控件
+
+这样就不必再用c++来每次不通用地写gtk程序了
+</pre>

@@ -1,0 +1,13 @@
+#summary 桌面小挂件——时钟
+
+= 桌面小挂件——时钟 =
+
+<pre>
+一个置顶的圆形的会走的时钟，有点不同的是可以进行宽高的加倍或减半设置
+再不同的就是程序是用zhscript编写，不满意或者想修改就用文本编辑器打开那些zs文件吧
+下载地址
+http://zhscript.googlecode.com/files/clock.7z
+下图
+
+http://zhscript.googlecode.com/svn/tmp/clock.png
+</pre>

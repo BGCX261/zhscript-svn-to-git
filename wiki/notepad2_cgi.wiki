@@ -1,0 +1,37 @@
+#summary 把记录追加到自身的cgi
+
+= 把记录追加到自身的cgi =
+{{{
+#!/usr/bin/zhscript --。
+（把记录追加到自身的cgi
+chmod 777 notepad2.cgi）
+显示“content-type: text/html; charset=utf-8”字符13字符10字符13字符10。
+加载lib/stdc。
+赋予长以调用‘得环境变量函数’、CONTENT_LENGTH。
+如果‘长’那么先
+	加载lib/doscmd4。
+	加载lib/file4。
+	赋予入以调用‘type’、-e、‘长’、-b、2、-。
+	赋予入以调用‘urldecode’、‘入’。
+	调用‘echo’、‘入’“原样上字符10、下原样”、-ma、‘参数0’。
+	显示<script>window.location.href="?"</script>。
+	结束。
+了。
+解释下代码
+	加载lib/gjke4。
+	逆迭代数组下代码
+		别名数据以参数1。
+		加载lib/regexpr4。
+		赋予数据以调用‘正则替’、‘数据’、“\[a\]([a-z]+://[^字符13字符10字符9 ]+)”、“<a href="$1">$1</a>”。
+		赋予数据以调用‘正则替’、‘数据’、“\[A\]([a-z]+://[^字符13字符10字符9 ]+)”、“<a href="$1">[A]</a>$1”。
+		赋予数据以调用‘正则替’、‘数据’、“\[A([^]]+)\]([a-z]+://[^字符13字符10字符9 ]+)”、“<a href="$2">$1</a>”。
+		赋予数据以调用‘正则替’、‘数据’、“\[i\]([a-z]+://[^字符13字符10字符9 ]+)”、“<img src="$1">$1”。
+		赋予数据以调用‘正则替’、‘数据’、“\[I\]([a-z]+://[^字符13字符10字符9 ]+)”、“<img src="$1" src="$1" title="$1">”。
+		显示<pre>‘数据’</pre>。
+	代码上、参数。
+	显示
+	“<form method="post"><textarea name=t rows="5" style="width:100%"></textarea>
+	<br><input type=submit value=----P--O--S--T----> [a]链接地址 [A]链接地址（文字） [A文字]链接地址 [i]图片地址 [I]图片地址（无文字）
+	</form>”。
+代码上、下原样
+}}}
